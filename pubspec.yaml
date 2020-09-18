@@ -1,7 +1,7 @@
 name: nothing
 description: An interesting app made with Flutter.
 
-publish_to: 'none' 
+publish_to: "none"
 
 version: 1.0.0+1
 
@@ -11,9 +11,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+<<<<<<< Updated upstream
   
   cupertino_icons:
   flutter_spinkit:
+=======
+
+  cupertino_icons: null
+  flutter_spinkit: null
+  swipedetector: null
+  shake: null
+  animated_floatactionbuttons: null
+  youtube_player_flutter: 6.1.1
+>>>>>>> Stashed changes
 
 dev_dependencies:
   flutter_test:
@@ -23,4 +33,13 @@ flutter:
   uses-material-design: true
 
   assets:
+<<<<<<< Updated upstream
    - assets/
+=======
+    - assets/
+
+  fonts:
+    - family: Caveat
+      fonts:
+        - asset: fonts/Caveat-Regular.ttf
+>>>>>>> Stashed changes
