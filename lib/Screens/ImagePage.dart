@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:nothing/Screens/DrawingBoard.dart';
 import 'package:nothing/Screens/VideoPage.dart';
 import 'package:shake/shake.dart';
 
@@ -25,9 +26,54 @@ class _ImagePageState extends State<ImagePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: imageToShow,
+    return  Scaffold(
+      backgroundColor: Colors.white,
+    body:Stack(
+children: [
+   Center(
+     child: Container(
+          color: Colors.white,
+          child: imageToShow,
+        ),
+   ),
+      Positioned(
+              bottom: 0,
+              right: 0,
+              child: Container(
+                 height: 150,
+                width: 150,
+
+                child: RaisedButton(
+                   color: Colors.white,
+                  onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CanvasPainting()),
+                  );
+                }),
+              )),
+               Positioned(
+              top: 0,
+              left: 0,
+              child: Container(
+                
+                height: 150,
+                width: 150,
+                child: OutlineButton(
+                  color: Colors.white,
+                  disabledBorderColor:Colors.white,
+
+                  onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => VideoPage()),
+                  );
+                }),
+              )),
+],
+    ),
+          
+
     );
   }
 
