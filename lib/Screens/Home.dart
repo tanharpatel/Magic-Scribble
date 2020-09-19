@@ -17,16 +17,16 @@ class _HomeState extends State<Home> {
     timer = Timer(Duration(seconds: 10), () => setState(() {pattern = "";}));
     return SwipeDetector(
       onSwipeRight: (){setState(() {
-        pattern = pattern + "right ";
+        pattern = pattern + "right "; print(pattern);
       });},
       onSwipeLeft: (){setState(() {
-        pattern = pattern + "left ";
+        pattern = pattern + "left "; print(pattern);
       });},
       onSwipeUp: (){setState(() {
-        pattern = pattern + "up ";
+        pattern = pattern + "up "; print(pattern);
       });},
       onSwipeDown: (){setState(() {
-        pattern = pattern + "down ";
+        pattern = pattern + "down "; print(pattern);
       });},
       child: isPattern() ? react() : Container(
         color: Colors.black,
@@ -45,16 +45,10 @@ class _HomeState extends State<Home> {
   }
 
   isPattern() {
-    if(pattern == "up up down down " ||
-      pattern == "right left up down " ||
-      pattern == "right left down up " ||
-      pattern == "right up left down " ||
-      pattern == "right down up left " ||
-      pattern == "right up left down " ||
-      pattern == "right down left up " ||
-      pattern == "up left down right " ||
-      pattern == "up right left down " ||
-      pattern == "right left right left ") {
+    if(pattern == "up down " || pattern == "up right " || pattern == "up left " || pattern == "up up " ||
+      pattern == "right left " || pattern == "right up " || pattern == "right down " || pattern == "right right " ||
+      pattern == "left down " || pattern == "left right " || pattern == "left up " || pattern == "left left " ||
+      pattern == "down left " || pattern == "down right " || pattern == "down up " || pattern == "down down ") {
       return true;
     } else {
       return false;

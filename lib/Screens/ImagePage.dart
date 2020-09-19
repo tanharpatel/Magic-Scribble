@@ -1,5 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:nothing/Screens/DrawingBoard.dart';
 import 'package:nothing/Screens/VideoPage.dart';
 import 'package:shake/shake.dart';
 
@@ -17,67 +19,116 @@ class _ImagePageState extends State<ImagePage> {
 
   @override
   void initState() {
-    detector = ShakeDetector.autoStart(
-      onPhoneShake: () {shake++; changeImage();}
-    );
+    detector = ShakeDetector.autoStart(onPhoneShake: () {
+      shake++;
+      changeImage();
+      showToast();
+    });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: imageToShow,
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          Center(
+            child: Container(
+              height: MediaQuery.of(context).size.height*0.5,
+              color: Colors.white,
+              child: imageToShow,
+            ),
+          ),
+          Positioned(
+            bottom: 0,
+            right: 0,
+            child: Container(
+              height: MediaQuery.of(context).size.height*0.25,
+              width: 150,
+              child: FlatButton(
+                color: Colors.white,
+                child: Container(),
+                onPressed: () {
+                  Navigator.pushNamed(context, VideoPage.id);
+                },
+              ),
+            ),
+          ),
+          Positioned(
+            top: 0,
+            left: 0,
+            child: Container(
+              height: MediaQuery.of(context).size.height*0.25,
+              width: 150,
+              child: FlatButton(
+                color: Colors.white,
+                child: Container(),
+                onPressed: () {
+                  Navigator.popAndPushNamed(context, CanvasPainting.id);
+                },
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
   changeImage() {
-    if(shake == 1) {
+    if (shake == 1) {
       setState(() {
         imageToShow = Image.asset("assets/1.jpg");
       });
-    } else if(shake == 10) {
+    } else if (shake == 10) {
       setState(() {
         imageToShow = Image.asset("assets/10.jpg");
       });
-    } else if(shake == 20) {
+    } else if (shake == 20) {
       setState(() {
         imageToShow = Image.asset("assets/20.jpg");
       });
-    } else if(shake == 30) {
+    } else if (shake == 30) {
       setState(() {
         imageToShow = Image.asset("assets/30.jpg");
       });
-    } else if(shake == 40) {
+    } else if (shake == 40) {
       setState(() {
         imageToShow = Image.asset("assets/40.jpg");
       });
-    } else if(shake == 50) {
+    } else if (shake == 50) {
       setState(() {
         imageToShow = Image.asset("assets/50.jpg");
       });
-    } else if(shake == 60) {
+    } else if (shake == 60) {
       setState(() {
         imageToShow = Image.asset("assets/60.jpg");
       });
-    } else if(shake == 70) {
+    } else if (shake == 70) {
       setState(() {
         imageToShow = Image.asset("assets/70.jpg");
       });
-    } else if(shake == 80) {
+    } else if (shake == 80) {
       setState(() {
         imageToShow = Image.asset("assets/80.jpg");
       });
-    } else if(shake == 90) {
+    } else if (shake == 90) {
       setState(() {
         imageToShow = Image.asset("assets/90.jpg");
       });
-    } else if(shake == 100) {
+    } else if (shake == 100) {
       setState(() {
         imageToShow = Image.asset("assets/100.jpg");
       });
       detector.stopListening();
-      Timer(Duration(seconds: 2), () => Navigator.popAndPushNamed(context, VideoPage.id));
+      Timer(Duration(seconds: 2),
+          () => Navigator.popAndPushNamed(context, VideoPage.id));
+    }
+  }
+
+  showToast() {
+    if(shake.toString().endsWith("5")) {
+      Fluttertoast.showToast(msg: "$shake");
     }
   }
 }

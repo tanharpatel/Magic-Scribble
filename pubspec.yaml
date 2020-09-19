@@ -16,6 +16,9 @@ dependencies:
   flutter_spinkit:
   swipedetector:
   shake:
+  fluttertoast:
+  connectivity:
+  youtube_player_flutter: 6.1.1
   animated_floatactionbuttons:
 
 dev_dependencies:
