@@ -13,7 +13,7 @@ class ImagePage extends StatefulWidget {
 }
 
 class _ImagePageState extends State<ImagePage> {
-  Image imageToShow = Image.asset("assets/logo.jpg");
+  Image imageToShow = Image.asset("assets/logo.png");
   ShakeDetector detector;
   int shake = 0;
 

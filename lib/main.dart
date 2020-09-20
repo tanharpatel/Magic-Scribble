@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:gradient_text/gradient_text.dart';
 import 'package:nothing/Screens/DrawingBoard.dart';
 import 'package:nothing/Screens/Home.dart';
 import 'package:nothing/Screens/ImagePage.dart';
@@ -42,11 +43,58 @@ class _SplashState extends State<Splash> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Image.asset("assets/logo.jpg", height: 200,),
+          Image.asset("assets/logo.png", height: 200,),
           SizedBox(height: 30,),
-          Center(child: Text("Magic Scribble", style: TextStyle(color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),)),
+          Center(child: GradientText(
+              "Magic Scribble", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              gradient: LinearGradient(colors: [
+                Colors.red,
+                Colors.pink,
+                Colors.purple,
+                Colors.deepPurple,
+                Colors.deepPurple,
+                Colors.indigo,
+                Colors.blue,
+                Colors.lightBlue,
+                Colors.cyan,
+                Colors.teal,
+                Colors.green,
+                Colors.lightGreen,
+                Colors.lime,
+                Colors.yellow,
+                Colors.amber,
+                Colors.orange,
+                Colors.deepOrange,
+              ]),
+          ),),
           SizedBox(height: 50,),
-          SpinKitChasingDots(color: Colors.black, size: 60),
+          SizedBox(
+            height: 80,
+            child: ShaderMask(
+              shaderCallback: (bounds) => RadialGradient(
+                center: Alignment.center,
+                colors: [
+                  Colors.red,
+                  Colors.pink,
+                  Colors.purple,
+                  Colors.deepPurple,
+                  Colors.deepPurple,
+                  Colors.indigo,
+                  Colors.blue,
+                  Colors.lightBlue,
+                  Colors.cyan,
+                  Colors.teal,
+                  Colors.green,
+                  Colors.lightGreen,
+                  Colors.lime,
+                  Colors.yellow,
+                  Colors.amber,
+                  Colors.orange,
+                  Colors.deepOrange,
+                ]).createShader(bounds),
+              child: SpinKitChasingDots(color: Colors.white, size: 70),
+            ),
+          ),
         ],
       ),
     );

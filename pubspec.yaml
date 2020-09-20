@@ -20,6 +20,7 @@ dependencies:
   connectivity:
   youtube_player_flutter: 6.1.1
   animated_floatactionbuttons:
+  gradient_text:
 
 dev_dependencies:
   flutter_test:
