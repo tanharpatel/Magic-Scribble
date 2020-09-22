@@ -1,4 +1,4 @@
-package com.tanharpatel.nothing;
+package com.tanharpatel.magicscribble;
 
 import io.flutter.embedding.android.FlutterActivity;
 

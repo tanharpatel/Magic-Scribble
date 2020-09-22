@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:nothing/Screens/DrawingBoard.dart';
-import 'package:nothing/Screens/VideoPage.dart';
+import 'package:magicscribble/Screens/DrawingBoard.dart';
+import 'package:magicscribble/Screens/VideoPage.dart';
 import 'package:shake/shake.dart';
 
 class ImagePage extends StatefulWidget {

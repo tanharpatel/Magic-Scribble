@@ -1,6 +1,6 @@
 {
-    "name": "nothing",
-    "short_name": "nothing",
+    "name": "magicscribble",
+    "short_name": "magicscribble",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

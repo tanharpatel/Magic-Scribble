@@ -1,6 +1,6 @@
 import 'package:animated_floatactionbuttons/animated_floatactionbuttons.dart';
 import 'package:flutter/material.dart';
-import 'package:nothing/Screens/Painter.dart';
+import 'package:magicscribble/Screens/Painter.dart';
 
 class CanvasPainting extends StatefulWidget {
   static final String id = "CanvasPainting";

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:nothing/Screens/ImagePage.dart';
+import 'package:magicscribble/Screens/ImagePage.dart';
 import 'package:swipedetector/swipedetector.dart';
 
 class Home extends StatefulWidget {

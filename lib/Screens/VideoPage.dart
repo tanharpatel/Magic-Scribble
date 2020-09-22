@@ -1,7 +1,7 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
-import 'package:nothing/Screens/DrawingBoard.dart';
-import 'package:nothing/Screens/ImagePage.dart';
+import 'package:magicscribble/Screens/DrawingBoard.dart';
+import 'package:magicscribble/Screens/ImagePage.dart';
 import 'dart:core';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 

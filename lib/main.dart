@@ -2,10 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:gradient_text/gradient_text.dart';
-import 'package:nothing/Screens/DrawingBoard.dart';
-import 'package:nothing/Screens/Home.dart';
-import 'package:nothing/Screens/ImagePage.dart';
-import 'package:nothing/Screens/VideoPage.dart';
+import 'package:magicscribble/Screens/DrawingBoard.dart';
+import 'package:magicscribble/Screens/Home.dart';
+import 'package:magicscribble/Screens/ImagePage.dart';
+import 'package:magicscribble/Screens/VideoPage.dart';
 
 void main() {
   runApp(
